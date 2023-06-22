@@ -1,4 +1,5 @@
 <script>
+
     //PROBLEMA: Compra na Feira
     //Considere que a pessoa foi até a feira e realizou algumas compras, sendo:
     //Mamão: 5 Unidades
@@ -9,10 +10,22 @@
     //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, indicando se sobrará ou faltará dinheiro, e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
 
     //ENTRADA
-
+    const Mamão = Number(prompt("Informe o valor da unidade do mamão").replace(",", ".").trim());
+    const Melancia = Number(prompt("Informe o valor do Kg da melancia").replace(",", ".").trim());
+    const Abacate = Number(prompt("Informe o valor das unidades do abacate").replace(",", ".").trim());
+    const Cebola = Number(prompt("Informe o valor do Kg da cebola").replace(",", ".").trim());
+    const dinheiro = Number(prompt("Informe o quanto dinheiro possui para realizar a compra. ").replace(",", ".").trim());
 
     //PROCESSAMENTO
-
+    const precoMamão = Mamão * 5;
+    const precomelancia = Melancia * 3;
+    const precoabacate = Abacate * 4;
+    const precocebola = Cebola * 1;
+    const custoTotal = precoMamão + precomelancia + precoabacate + precocebola;
+    const valor1 = Number(dinheiro - custoTotal && dinheiro < custoTotal)
+    alert(`Irar faltar $${valor1} do dinheiro  dá sua compra`);
+    const valor2 = Number(dinheiro - custoTotal && dinheiro > custoTotal)
+    alert(`Irar sobrar $${valor2} dá sua compra`);
 
     //SAÍDA
 

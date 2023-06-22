@@ -6,10 +6,19 @@
     //Contudo, caso o aluno que ajudou (TUTOR) obteve maior nota, bonifique-o com um adicional de 10% da nota do aluno ajudado, e o programa apresentará a mensagem "CONTINUE ENSINANDO!" e também apresentará a nota final do aluno que ajudou (TUTOR).
 
     //ENTRADA
-
+const notaAluno = Number(prompt("Informe a sua nota no terceiro trimestre aluno(tutor)").trim());
+const notaAjudado = Number(prompt("Informe a sua nota no terceiro trimestre, aluno ajudado").trim());
 
     //PROCESSAMENTO
-
+    if( notaAjudado > notaAluno){
+        alert(`CRIA MAIOR QUE O CRIADOR, a nota do aluno ajudado é ${notaAjudado.toFixed(2)}!!!!`);
+    }
+    else if ( notaAjudado < notaAluno  * 1.100){
+        alert(`CONTINUE ENSINANDO, a nota do aluno que ajudou(TUTOR) é ${notaAluno.toFixed(2)}`);
+    }
+    else{
+        alert(`Algo deu errado, informe as notas em formato de numeros!!!`);
+    }
 
     //SAÍDA
 
